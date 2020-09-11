@@ -22,7 +22,7 @@ function addName() {
   // - https://www.w3schools.com/jsref/prop_node_innertext.asp
 
   let nameElement = document.querySelector('#name');
-  nameElement.innerText = 'See script.js!';
+  nameElement.innerText = 'Kevin!';
 }
 
 function addFavoriteThings() {
@@ -36,6 +36,23 @@ function addFavoriteThings() {
   //   - https://htmldog.com/guides/javascript/advanced/creatingelements/
   //   - https://www.javascripttutorial.net/javascript-dom/javascript-createelement/
   //   - https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement
+
+  let ul = document.querySelector('#favthings');
+  let penguinItem = document.createElement('li');
+  penguinItem.appendChild(document.createTextNode("Penguins"));
+  ul.appendChild(penguinItem);
+
+  let blueItem = document.createElement('li');
+  blueItem.appendChild(document.createTextNode("Blue"));
+  ul.appendChild(blueItem);
+
+  let icecreamItem = document.createElement('li');
+  icecreamItem.appendChild(document.createTextNode("Ice Cream"));
+  ul.appendChild(icecreamItem);
+
+  let ultimateItem = document.createElement('li');
+  ultimateItem.appendChild(document.createTextNode("Ultimate"));
+  ul.appendChild(ultimateItem);
 }
 
 function replaceImage() {
@@ -46,6 +63,9 @@ function replaceImage() {
   // See:
   // - https://www.tutorialrepublic.com/javascript-tutorial/javascript-dom-get-set-attributes.php
   // - https://www.w3schools.com/jsref/met_element_setattribute.asp
+
+  let img = document.querySelector('#picture');
+  img.setAttribute("src","https://www.morrishospital.org/wp-content/uploads/2018/12/penguin2_2-1024x768.jpg");
 }
 
 function changeCodeStatus() {
@@ -54,6 +74,9 @@ function changeCodeStatus() {
   // 1. Get a reference to <div id="codestatus">
   // 2. Create image element containing a sweet ol' meme
   // 3. Replace text in codestatus w/ image
+
+  let codestatus = document.querySelector("#codestatus");
+  codestatus.innerHTML = '<img src=https://imgflip.com/s/meme/Socially-Awesome-Awkward-Penguin.jpg>'
 }
 
 // Get a reference to the button w/ id="show-info-button"
