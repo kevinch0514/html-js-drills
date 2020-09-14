@@ -119,6 +119,35 @@ informationForm.addEventListener('submit', function(event) {
 
   // Google things like:
   //   javascript form element get values
+
+  let fname = document.getElementById('fname').value;
+  let lname = document.getElementById('lname').value;
+  let cars = document.getElementById('cars').value;
+
+  //i think the checks are messing me up
+  if document.getElementById('icecreamyes').checked {
+    icpoll = document.getElementById('icecreamyes').value;
+  } else if (document.getElementById('icecreamno').checked) {
+    icpoll = document.getElementById('icecreamno').value;
+  }
+
+  function displayinfo() {
+    console.log('displayinformation');
+
+  let firstname = document.querySelector('#firstname');
+  firstname.appendChild(fname);
+
+  let lastname = document.querySelector('#lastname');
+  lastname.appendChild(lname);
+
+  let chosencar = document.querySelector('#chosencar');
+  chosencar.appendChild(cars);
+
+  let icecreamstatus = document.querySelector('#icecreamstatus');
+  icecreamstatus.appendChild(icpoll);
+
+  displayinfo();
+  //why is it not working? I'll have to work on this a bit more.
 });
 
 /*************************************
